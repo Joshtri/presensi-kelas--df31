@@ -87,10 +87,10 @@ const FormAddPresensi = () => {
     } catch (error) {
       if (error.response) {
         toast.error("Server responded with error: " + error.response.data);
-        console.log("Server responded with error:", error.response.data);
+        // console.log("Server responded with error:", error.response.data);
       } else {
         toast.error("Failed to save presensi: " + error.message);
-        console.log("Failed to save presensi:", error.message);
+        // console.log("Failed to save presensi:", error.message);
       }
     }
   };
