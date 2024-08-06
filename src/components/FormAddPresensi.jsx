@@ -80,11 +80,11 @@ const FormAddPresensi = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/presensi`, {
+      const response = await axios.put(`${import.meta.env.VITE_BASE_URL}/api/presensi/${selectedPeserta}`, {
         pesertaId: selectedPeserta,
         jam_masuk: jamMasuk,
         jam_keluar: jamKeluar,
-        live_sesi: 1,
+        // live_sesi: 2,
       });
 
       // Reset form inputs
