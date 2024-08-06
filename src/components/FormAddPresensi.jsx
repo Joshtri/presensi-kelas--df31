@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button, Card, InputGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faHourglassStart, faHourglassEnd, faFloppyDisk, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +7,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './formPresensi.css'; 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const FormAddPresensi = () => {
   const [pesertas, setPesertas] = useState([]);
@@ -17,7 +17,7 @@ const FormAddPresensi = () => {
   const [jamMasuk, setJamMasuk] = useState("");
   const [jamKeluar, setJamKeluar] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     getPeserta();
@@ -80,8 +80,20 @@ const FormAddPresensi = () => {
         jam_keluar: jamKeluar,
         live_sesi: 1,
       });
-      toast.success("Presensi saved successfully!");
-      navigate("/");
+
+      // Reset form inputs
+      setSelectedPeserta('');
+      setJamMasuk('');
+      setJamKeluar('');
+      setSearchQuery('');
+
+      toast.success("Presensi saved successfully!",)
+      //   onClose: () => {
+      //     // Refresh the page after the toast is closed
+      //     window.location.href = '/';
+      //   }
+      // });
+      // navigate("/");
 
       console.log("Presensi saved successfully:", response.data);
     } catch (error) {
