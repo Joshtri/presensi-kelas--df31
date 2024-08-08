@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 
 const GreetingCard = () => {
 
-  const live_ke = 4;
+  const live_ke = 5;
   return (
     <>
       <Card.Title>Hallo sahabat semua!</Card.Title>
@@ -12,6 +12,12 @@ const GreetingCard = () => {
         Terima kasih sudah berpartisipasi dalam Pelatihan dengan Tema Database
         (Database Design & Programming with SQL) Live Session-{live_ke}. Tetap semangat
         untuk pelatihan-pelatihan selanjutnya.
+      </Card.Text>
+
+      <Card.Text>
+        <p  className="fw-bold">
+          *Pastikan Anda sudah check out :)
+        </p>
       </Card.Text>
     </>
   );

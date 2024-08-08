@@ -175,22 +175,25 @@ const FormAddPresensi = () => {
               <Col lg={6} className="mb-3">
                 <Form.Group>
                   <Form.Label>
-                    <FontAwesomeIcon icon={faHourglassStart} className="mx-1" style={{ color: "#ca5858" }} /> Jam Masuk
+                    <FontAwesomeIcon icon={faHourglassStart} className="mx-1" style={{ color: "#ca5858" }} /> Jam Masuk (WITA)
                   </Form.Label>
                   <Form.Control type="time" value={jamMasuk} onChange={(e)=> setJamMasuk(e.target.value)} required />
                   <Form.Text className="text-muted ms-1">
                     *) Jam Masuk (contoh: check in 09:00, maka jam masuk 10.00)
+                    **) Sesuaikan dengan waktu check in
                   </Form.Text>
                 </Form.Group>
               </Col>
               <Col lg={6} className="mb-3">
                 <Form.Group>
                   <Form.Label>
-                    <FontAwesomeIcon icon={faHourglassEnd} className="mx-1" /> Jam Keluar
+                    <FontAwesomeIcon icon={faHourglassEnd} className="mx-1" /> Jam Keluar (WITA)
                   </Form.Label>
                   <Form.Control type="time" value={jamKeluar} onChange={(e)=> setJamKeluar(e.target.value)} required />
                   <Form.Text className="text-muted ms-1">
                     *) Jam Keluar (contoh: check out 09:00, maka jam keluar 10.00)
+                    **) Sesuaikan dengan waktu check out
+
                   </Form.Text>
                 </Form.Group>
               </Col>
