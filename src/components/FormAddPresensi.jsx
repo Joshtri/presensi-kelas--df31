@@ -180,7 +180,12 @@ const FormAddPresensi = () => {
                   <Form.Control type="time" value={jamMasuk} onChange={(e)=> setJamMasuk(e.target.value)} required />
                   <Form.Text className="text-muted ms-1">
                     *) Jam Masuk (contoh: check in 09:00, maka jam masuk 10.00)
-                    **) Sesuaikan dengan waktu check in
+                  </Form.Text>
+
+                  <Form.Text className="text-muted ms-1">
+                    <div>
+                      **) Sesuaikan dengan waktu check in
+                    </div>
                   </Form.Text>
                 </Form.Group>
               </Col>
@@ -192,8 +197,12 @@ const FormAddPresensi = () => {
                   <Form.Control type="time" value={jamKeluar} onChange={(e)=> setJamKeluar(e.target.value)} required />
                   <Form.Text className="text-muted ms-1">
                     *) Jam Keluar (contoh: check out 09:00, maka jam keluar 10.00)
-                    **) Sesuaikan dengan waktu check out
+                  </Form.Text>
 
+                  <Form.Text className="text-muted ms-1">
+                    <div>
+                      **) Sesuaikan dengan waktu check out
+                    </div>
                   </Form.Text>
                 </Form.Group>
               </Col>
