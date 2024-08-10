@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 
 const GreetingCard = () => {
 
-  const live_ke = 6;
+  const live_ke = 7;
   return (
     <>
       <Card.Title>Hallo sahabat semua!</Card.Title>
